@@ -1,0 +1,121 @@
+| Column Name             | Meaning/Explanation                                             				| Modality |
+|-------------------------|-----------------------------------------------------------------				|----------|
+| PHASE                   | Phase of the study (e.g., baseline, follow-up)                  				|ADNI1, ADNI2, ADNIGO
+| RID                     | Unique participant ID                                           				|1...n, one unique number for each participant
+| FHQSOURCE               | Information source                                              				|1 = Participant Visit, 2 = Telephone Call
+| FHQPROV                 | Indicate who provided the info collected for this questionnaire:				|1 = Participant Only, 2 = Study partner only, 3= Participant and Study partner
+| FHQMOM                  | Family history of mother with dementia                          				|1 = Yes, 0 = No, 2=Don't Know
+| FHQMOMAD                | Family history of mother with Alzheimer's disease               				|1 = Yes, 0 = No, 2=Don't Know     
+| FHQDAD                  | Family history of father with dementia                          				|1 = Yes, 0 = No, 2=Don't Know          
+| FHQDADAD                | Family history of father with Alzheimer's disease               				|1 = Yes, 0 = No, 2=Don't Know          
+| FHQSIB                  | Family history for siblings with Dementia                       				|1 = Yes, 0 = No, 2=Don't Know          
+| FHQSIBAD                | Family history for siblings with Alzheimer's disease            				|1 = Yes, 0 = No, 2=Don't Know          
+| USERDATE2               | Date record last updated             			    				|Date         
+| PTSOURCE                | Source of the patient's data				    				|1 = Participant Visit, 2 = Telephone Call          
+| PTGENDER                | Patient's gender                                                				|1 = Male, 2 = Female       
+| PTDOBMM                 | Month of birth                                                  				|1...12          
+| PTDOBYY                 | Year of birth                                                   				|1900...1980           
+| PTHAND                  | Handedness (left or right)                                      				|1 = Right, 2 = Left          
+| PTMARRY                 | Marital status of the patient                                   				|1=Married; 2=Widowed; 3=Divorced; 4=Never married; 5=Unknown          
+| PTEDUCAT                | Years of education                                              				|0...20          
+| PTWORKHS                | Does the participant have a work history sufficient to exclude mental retardation?          |1 = Yes, 0 = No    
+| PTWORK                  | Primary occupation during most of adult life          					|Object      
+| PTWRECNT                | Most recent occupation         								|Object          
+| PTHOME                  | Type of Participant residence            				                        |1=House (owned or rented); 2=Condo/Co-op (owned); 3=Apartment (rented); 4=Mobile Home; 5=Retirement Community; 6=Assisted Living; 7=Skilled Nursing Facility; 8=Other (specify)	          
+| PTOTHOME                | If other type of residence: specify								|Object
+| PTTLANG                 | Language to be used for testing the Participant                      			|1=English, 2=Spanish          
+| PTPLANG                 | Primary language spoken                                       				|1=English; 2=Spanish; 3=Other (specify)         
+| PTPSPEC                 | If Other spoken language, specify:                            				|Object
+| PTCOGBEG                | Year of onset of cognitive symptoms (best estimate)                              		|9999=NA - Cognitively Normal;1985=1985;1986=1986;1987=1987;1988=1988;1989=1989;1990=1990;1991=1991;1992=1992;1993=1993;1994=1994;1995=1995;1996=1996;1997=1997;1998=1998;1999=1999;2000=2000;2001=2001;2002=2002;2003=2003;2004=2004;2005=2005;2006=2006;2007=2007;2008=2008;2009=2009;2010=2010;2011=2011;2012=2012          
+| PTMCIBEG		  | Year of onset of Mild Cognitive Impairment symptoms (best estimate)				|1985...2012
+| PTADBEG                 | Year of onset of Alzheimer's disease symptoms (best estimate)                            	|1985...2012          
+| PTETHCAT                | Ethnic category                                            					|1=Hispanic or Latino; 2=Not Hispanic or Latino; 3=Unknown          
+| PTRACCAT                | Racial category                                                 				|1=American Indian or Alaskan Native; 2=Asian; 3=Native Hawaiian or Other Pacific Islander; 4=Black or African American; 5=White; 6=More than one race; 7=Unknown          
+| VISCODE	          | Visit code                               							|Integer          
+| FHQGNDR                 | Gender of siblings                                    					|1=Male;2=Female
+| SITEID	          | Site ID for medical data                                      				|          
+| VISCODE2                | Translated Visit Code                         						|          
+| USERDATE	          | Date record created							                        |Date          
+| RGSTATUS                | Was a screening visit/ADNI2 initial visit performed?                                     	|1=Yes;0=No          
+| VISTYPE                 | Type of visit 							                        |For ADNIGO and ADNI2: 1=Standard;2=Non-standard;3=Not done
+| CHANGTR		  | Would you like to change this visit's track or the participant's visit schedule?            |0=No;1=Yes, change this visit's track;2=Yes, change ADNI1 continuing participant's visit schedule
+| EXAMDATE                | Examination Date				                                                |Date          
+| CGTRACK		  | Please select from the following visit's tracks:						|-4=No selection;1=standard eMCI visit;2=standard ADNI1 continuing visit(start at m36);3=standard ADNI1 continuing visit(start at m48);4=standard ADNI1 continuing visit(start at m60);5=flexible;
+| CGTRACK2		  | Please select from the following visit's schedule:						|-4=No selection;2=start ADNIGO at m36;3=start ADNIGO at m48;4=start ADNIGO at m60;
+| ID	                  | RECORD ID							                                |          
+| VSWEIGHT                | Weight measurement                                            				|Integer          
+| VSWTUNIT                | Weight unit (kg/lbs)                                          				|1=pounds; 2=kilograms       
+| VSHEIGHT                | Height measurement                                            				|Integer          
+| VSHTUNIT                | Height unit (cm/inches)                                       				|1=inches;2=centimeters          
+| VSBPSYS                 | Systolic - mmHg (Systolic blood measurement)    						|76..250          
+| VSBPDIA                 | Diastolic blood pressure measurement - mmHg				                        |36..130          
+| VSPULSE                 | Seated Pulse rate per minute                                       				|40...130          
+| VSRESP                  | Respirations per minute                                  					|Integer         
+| VSTEMP                  | Temperature measurement                                       				|6...40         
+| Q1_ADASSCORE		  | Word Recall											|Score: 0...5
+| Q2_ADASSCORE		  | Commands     										|Score: 0...5
+| Q3_ADASSCORE		  | Constructions                                                                               |Score: 0...5
+| Q4_ADASSCORE		  | Delayed Word Recall                                                                         |Score: 0...5
+| Q5_ADASSCORE		  | Naming		                                                                        |Score: 0...5
+| Q6_ADASSCORE		  | Ideational Praxis	                                                                        |Score: 0...5
+| Q7_ADASSCORE		  | Orientation		                                                                        |Score: 0...8
+| Q8_ADASSCORE		  | Word Recognition	                                                                        |Score: 0...12
+| Q9_ADASSCORE		  | Recall Instructions	                                                                        |Score: 0...5
+| Q10_ADASSCORE		  | Spoken Language										|1 = None; 2 = Very Mild; 3 = Mild; 4 = Moderate; 5 = Moderately Severe; 6 = Severe; NULL = Missing or N/A
+| Q11_ADASSCORE		  | Word Finding										|1 = None; 2 = Very Mild; 3 = Mild; 4 = Moderate; 5 = Moderately Severe; 6 = Severe; NULL = Missing or N/A
+| Q12_ADASSCORE		  | Comprehension										|1 = None; 2 = Very Mild; 3 = Mild; 4 = Moderate; 5 = Moderately Severe; 6 = Severe; NULL = Missing or N/A
+| Q14_ADASSCORE		  | Number Cancellation										|1 = None; 2 = Very Mild; 3 = Mild; 4 = Moderate; 5 = Moderately Severe; 6 = Severe; NULL = Missing or N/A
+| TOTAL11                 | Classic 70 point total. Excludes Q4 (Delayed Word Recall) and Q14 (Number Cancellation).    |0...70                                   |
+| TOTALMOD                | 85 point total includingQ4 (Delayed Word Recall) and Q14 (Number Cancellation).             |0...85          
+| DXCHANGE                | Which best describes the participant's change in cognitive status from last visit to now:  	|for adnigo: 1=Stable: NL to NL; 2=Stable: MCI to MCI; 3=Stable: Dementia to Dementia; 4=Conversion: NL to MCI; 5=Conversion: MCI to Dementia; 6=Conversion: NL to Dementia; 7=Reversion: MCI to NL; 8=Reversion: Dementia to MCI; 9=Reversion: Dementia to NL , for adni2: 1=Stable: NL; 2=Stable: MCI; 3=Stable: Dementia; 4=Conversion: NL to MCI; 5=Conversion: MCI to Dementia; 6=Conversion: NL to Dementia; 7=Reversion: MCI to NL; 8=Reversion: Dementia to MCI; 9=Reversion: Dementia to NL
+| DXCURREN                | Current diagnosis (e.g., AD, MCI, normal)                     				|1=NL;2=MCI;3=AD          
+| DXCONV                  | 2. Has there been a conversion or reversion to NL/MCI?                         		|1=Yes - Conversion;2=Yes - Reversion; 0=No          
+| DXCONTYP                | If YES - CONVERSION, choose type                                           			|1=Normal Control to MCI; 2=Normal Control to AD; 3=MCI to AD          
+| DXREV                   | If YES - REVERSION, choose type                                    				|1=MCI to Normal Control; 2=AD to MCI; 3=AD to Normal Control          
+| DXNORM                  | Normal						                                        |1=yes          
+| DXNODEP                 | Mild Depression					                                        |1=yes
+| DXMCI                   | Mild Cognitive Impairement						                        |1=yes          
+| DXMDES                  | If Mild Cognitive Impairment, select any that apply:                                        |for ADNI1: 1=MCI (Memory features); 2=MCI (Non-memory features), for ADNIGO and ADNI2:1=MCI - Memory features (amnestic); 2=MCI - Non-memory features (non-amnestic)
+| DXMPTR1	          | Subjective memory complaint									|1=yes, 0=No
+| DXMPTR2	          | Informant memory complaint									|1=yes, 0=No
+| DXMPTR3	          | Normal general cognitive function								|1=yes, 0=No, 2= Marginal
+| DXMPTR4	          | Normal Activity of daily living								|1=yes, 0=No, 2= Marginal
+| DXMPTR5	          | Objective memory impairement for age and education						|1=yes, 0=No, 
+| DXMPTR6	          | Not demented by diagnostic criteria								|1=yes, 0=No,
+| DXMDUE                  | If MCI								                        |1=MCI due to Alzheimer's Disease; 2=MCI due to other etiology          
+| DXMOTHET                | If MCI due to other etiology, select box(es) to indicate reason:                            |for Adni1: 1=Fronto-temporal Dementia; 2=Parkinson's Disease; 3=Huntington's Disease; 4=Progressive Supranuclear Palsy; 8=Corticobasal Degeneration; 9=Vascular Dementia; 10=Prion-Associated Dementia; 14=Other (specify), for ADNI2 and ADNIGO: 1=Fronto-temporal Dementia; 2=Parkinson's Disease; 3=Huntington's Disease; 4=Progressive Supranuclear Palsy; 5=Alcohol-related Dementia; 6=NPH; 7=Major Depression; 8=Corticobasal Degeneration; 9=Vascular Dementia; 10=Prion-Associated Dementia; 11=HIV; 12=Primary Progressive Aphasia; 13=Posterior Cortical Dysfunction; 14=Other (specify)          
+| DXMOTHSP                | Other specify:						                                |Object         
+| DXDSEV                  | Dementia Severity - Clinician's Impression                                       	        |1=Mild; 2=Moderate; 3=Severe          
+| DXDDUE                  | Suspected cause of dementia	                                     	        		|1=Dementia due to Alzheimer's Disease; 2=Dementia due to other etiology          
+| DXAD                    | Alzheimer's disease				                                                |1=yes         
+| DXADES                  | If Alzheimer's Disease, select box that indicates best description                          |1=Mild; 2=Moderate; 3=Severe         
+| DXAPP                   | If Dementia due to Alzheimer's Disease, indicate likelihood:                                |1=Probable; 2=Possible          
+| DXAPROB                 | If Probable AD, select box(es) for other symptoms present:                                  |1=None;2=Stroke(s);3=Depression;4=Delirium;5=Parkinsonism;6=Metabolic/Toxic Disorder (specify);7=Other (specify)          
+| DXAMETASP               | Metabolic/Toxic Disorder (specify):			                                        |Object
+| DXAOTHRSP               | Other (specify):					                                        |Object
+| DXAPOSS                 | If Possible AD, select box(es) to indicate reason:                                 		|1=Atypical clinical course or features (specify); 2=Stroke(s); 3=Depression; 4=Delirium; 5=Parkinsonism; 6=Metabolic / Toxic Disorder (specify); 7=Other (specify)
+| DXAATYSP                | Atypical clinical course or features (specify)                                              |Object        
+| DXAMETSP                | Metabolic / Toxic Disorder (specify)                              				|Object    
+| DXAOTHSP                | Other(specify)					                                        |Object
+| DXPARK                  | Parkinsonism symptoms present?                                  				|1=yes, 0=No
+| DXPARKSP                | If yes, please describe                                					|object
+| DXPDES                  | If Parkinsonism, select box which indicates best diagnosis:                                	|1=Parkinsonism without cognitive impairment; 2=Parkinsonism with cognitive impairment, not demented; 3=Parkinsonism with cognitive impairment, demented; 4=Atypical Parkinsonism
+| DXPCOG                  | If Parkinsonism with cognitive impairment, demented                               	        |1=PD;2=PDD;3=DLB;4=PDAD
+| DXPATYP                 | If Atypical Parkinsonism                             	        			|1=PSP;2=CBGD;3=OPCA;4=SND;5=Shy Drager;6=Vascular;7=Other (specify)
+| DXPOTHSP                | Other (specify)                            	        					|object
+| DXDEP	                  | Depressive symptoms present?                           	        			|1=Yes; 0=No
+| DXDEPSP	          | If yes describe										|object
+| DXOTHDEM	          | Other Dementia (not Alzheimer's Disease)							|1=Yes
+| DXODES		  | If Other Dementia, select box which indicates best diagnosis:				|for ADNI1:1=Frontal; 3=Huntington's Disease; 5=Alcohol-related Dementia; 6=NPH; 7=Major Depression; 9=Vascular Dementia; 10=Prion-Associated Dementia; 11=HIV; 12=Primary Progressive Aphasia; 13=Posterior Cortical Dysfunction; 14=Other (specify), for ADNI2 and ADNIGO: 1=Fronto-temporal Dementia; 2=Parkinson's Disease; 3=Huntington's Disease; 4=Progressive Supranuclear Palsy; 5=Alcohol-related Dementia; 6=NPH; 7=Major Depression; 8=Corticobasal Degeneration; 9=Vascular Dementia; 10=Prion-Associated Dementia; 11=HIV; 12=Primary Progressive Aphasia; 13=Posterior Cortical Dysfunction; 14=Other (specify)
+| DXOOTHSP		  | Other (specify)										|Object
+| DXCONFID		  | Physician Confidence in Diagnosis:								|1=Uncertain; 2=Mildly Confident; 3=Moderately Confident; 4=Highly Confident
+| PTADDX		  | Year of Alzheimer's Disease diagnosis							|9999=NA - Not Diagnosed with AD;1985=1985;1986=1986;1987=1987;1988=1988;1989=1989;1990=1990;1991=1991;1992=1992;1993=1993;1994=1994;1995=1995;1996=1996;1997=1997;1998=1998;1999=1999;2000=2000;2001=2001;2002=2002;2003=2003;2004=2004;2005=2005;2006=2006;2007=2007;2008=2008;2009=2009;2010=2010;2011=2011;2012=2012
+| PTSTATUS		  | Participant Status:										|1=Active; 2=Discontinued from follow up, will not return
+| PTRTYR		  | Retirement date										|Date
+| PTNOTRT		  | Is participant retired?									|1=yes, 0=no
+| VSCOMM		  | Comment regarding vital signs								|object
+| VSTMPUNT		  | Temperature Units										|1= Farenheit, 2=Celsius
+| VSTMPSRC		  | Temperature source										|1= oral, 2=thympanic, 3=other
+|
+
+
