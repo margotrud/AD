@@ -1,7 +1,9 @@
 from adni_processor import ADNIProcessor
 
+is_need_to_build_DBB = 'no'
 if __name__ == "__main__":
-    processor = ADNIProcessor()
-    processor.run_pipeline()
+    if is_need_to_build_DBB:
+        processor = ADNIProcessor()
+        processor.run_pipeline()
 
 
