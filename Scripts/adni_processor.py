@@ -206,6 +206,32 @@ class ADNIProcessor:
                 mode_value = self.merged_data[col].mode()[0]
                 self.merged_data[col] = self.merged_data[col].fillna(mode_value)
 
+    def filter_baseline_data(self, method="exact_zero"):
+        """
+        Filters the merged dataset to include only baseline rows.
+
+        Parameters:
+            method (str): Determines the definition of baseline:
+                - "exact_zero": Retain rows where Months_Since_First_Visit == 0.
+                - "earliest": Retain the earliest visit for each participant.
+
+        The filtered baseline dataset is saved as 'baseline_only_dataset.csv' in the output folder.
+        """
+        if self.merged_data is None:
+            raise ValueError("Merged dataset is not available!")
+
+        if method == "exact_zero":
+            baseline_df = self.merged_data[self.merged_data["Months_Since_First_Visit"] == 0].copy()
+        elif method == "earliest":
+            # Sort by participant (RID) and visit time, then group and select the first record.
+            df_sorted = self.merged_data.sort_values(by=["RID", "Months_Since_First_Visit"])
+            baseline_df = df_sorted.groupby("RID", as_index=False).first()
+        else:
+            raise ValueError("Invalid method. Use 'exact_zero' or 'earliest'.")
+
+        print(f"Baseline dataset has {baseline_df.shape[0]} rows.")
+        baseline_df.to_csv(f"{self.output_folder}/baseline_only_dataset.csv", index=False)
+
     def save_final_dataset(self):
         """
         Saves the final processed dataset.
@@ -222,7 +248,6 @@ class ADNIProcessor:
         self.assign_months_since_first_visit()
         self.round_months()
         self.filter_0_36_months()
-        #self.extract_baseline_vars()
         self.impute_missing_values()
         self.delete_cols()
         self.save_final_dataset()
