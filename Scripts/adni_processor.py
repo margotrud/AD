@@ -6,7 +6,7 @@ class ADNIProcessor:
     """
     Processes ADNI datasets by loading, filtering, merging, and extracting baseline measures.
     """
-    def __init__(self, data_folder="Data", output_folder="Filtered_Data"):
+    def __init__(self, data_folder="..//Data", output_folder="..//Filtered_Data"):
         self.data_folder = data_folder
         self.output_folder = output_folder
         self.datasets = {}
@@ -222,7 +222,7 @@ class ADNIProcessor:
         self.assign_months_since_first_visit()
         self.round_months()
         self.filter_0_36_months()
-        self.extract_baseline_vars()
+        #self.extract_baseline_vars()
         self.impute_missing_values()
         self.delete_cols()
         self.save_final_dataset()
